@@ -1,6 +1,25 @@
+/*
+useReducer is a hook that is used for state management. 
+It is an alternative to useState. 
+
+reduce in JavaScript:-
+array.reduce(reducer, initialValue)
+singleValue = reducer(accumulator, itemValue)
+returns a single value
+
+useReduce in react
+useReducer(reducer, initialValue)
+newState = reducer(currentState, action)
+return a pair of values [newState, dispatch]
+
+reducer function
+reducer(currentState, action)
+*/
+
 import "./App.css";
 // import { useState } from "react";
 import { useReducer } from "react";
+import CounterOne from "./components/CounterOne";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -19,6 +38,7 @@ function App() {
 
   return (
     <div className="App">
+      <CounterOne />
       <h1>{state.count}</h1>
       {/* <h1>{count}</h1> */}
       <button
